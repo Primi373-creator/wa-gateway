@@ -18,7 +18,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.set("view engine", "ejs");
-// Public Path
 app.use("/p", express.static(path.resolve("public")));
 app.use("/p/*", (req, res) => res.status(404).send("Media Not Found"));
 
